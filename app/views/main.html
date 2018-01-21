@@ -1,0 +1,25 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>City</th>
+      <th>E0</th>
+      <th>E1</th>
+      <th>E2</th>
+      <th>E3</th>
+      <th>E4</th>
+      <th>E5</th>
+      <th>E6</th>
+      <th>E7</th>
+      <th>E8</th>
+      <th>E9</th>
+      <th>E10</th>
+    </tr>
+  </thead>
+  <tbody ng-repeat="i in cityData.cities">
+    <tr>
+      <td>{{i.Name}} ({{i.NumberOfCards}})</td>
+      <td data-ng-repeat="e in i.Epidemics track by $index"
+        data-ng-click="flipCard(i,$index)">{{i.Epidemics[$index]}}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,12 @@
+[
+    {"Name":"London","NumberOfCards": 3, "Epidemics":[0,0,0,0,0,0,0,0,0,0,0]},
+    {"Name":"New York","NumberOfCards": 3, "Epidemics":[0,0,0,0,0,0,0,0,0,0,0]},
+    {"Name":"Washington","NumberOfCards": 3, "Epidemics":[0,0,0,0,0,0,0,0,0,0,0]},
+    {"Name":"Tripoli","NumberOfCards": 3, "Epidemics":[0,0,0,0,0,0,0,0,0,0,0]},
+    {"Name":"Cairo","NumberOfCards": 3, "Epidemics":[0,0,0,0,0,0,0,0,0,0,0]},
+    {"Name":"Istanbul","NumberOfCards": 3, "Epidemics":[0,0,0,0,0,0,0,0,0,0,0]},
+    {"Name":"Jacksonville","NumberOfCards": 3, "Epidemics":[0,0,0,0,0,0,0,0,0,0,0]},
+    {"Name":"Lagos","NumberOfCards": 3, "Epidemics":[0,0,0,0,0,0,0,0,0,0,0]},
+    {"Name":"Sao Paolo","NumberOfCards": 3, "Epidemics":[0,0,0,0,0,0,0,0,0,0,0]},
+    {"Name":"Chicago","NumberOfCards": 2, "Epidemics":[0,0,0,0,0,0,0,0,0,0,0]}
+]
