@@ -10,6 +10,8 @@
 angular.module('pandemicInfectionsApp')
   .controller('MainCtrl', function ($scope, $http) {
 
+    let CITYKEY = 'CityData';
+
     $scope.sum = function (items, prop) {
       return items.reduce(function (a, b) {
         return a + b[prop];
@@ -17,17 +19,31 @@ angular.module('pandemicInfectionsApp')
     };
 
     $scope.flipCard = function (city, epidemic) {
-      if ( city.Epidemics[epidemic] < city.NumberOfCards) {
+      if (city.Epidemics[epidemic] < city.NumberOfCards) {
         city.Epidemics[epidemic]++;
+        localStorage.setItem(CITYKEY, angular.toJson($scope.cityData, false));
       }
       console.log(city.Epidemics);
     };
 
-    $http.get('cities.json').then(
-      function (result) {
-        $scope.cityData = {
-          "cities": result.data,
-          "total": $scope.sum(result.data, 'NumberOfCards')
-        };
-      });
+    $scope.loadDataFromServer = function () {
+      $http.get('cities.json').then(
+        function (result) {
+          $scope.cityData = {
+            'cities': result.data,
+            'total': $scope.sum(result.data, 'NumberOfCards')
+          };
+        });
+    };
+
+    $scope.resetData = function () {
+      localStorage.removeItem(CITYKEY);
+      $scope.loadDataFromServer();
+    };
+
+    $scope.cityData = angular.fromJson(localStorage.getItem(CITYKEY));
+
+    if ($scope.cityData === null) {
+
+    }
   });
